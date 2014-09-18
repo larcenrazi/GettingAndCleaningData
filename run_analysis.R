@@ -52,6 +52,4 @@ aqw <- dcast(aql, activity + subject ~ variable, fun.aggregate = mean,
 ## write tidy dataset to disk
 
 write.table(aqw, file="MyTideyData.txt", quote=FALSE, row.names=FALSE, sep="\t")
-## write codebook to disk
-write.table(paste("* ", names(tidy), sep=""), file="CodeBook.md", quote=FALSE,
-row.names=FALSE, col.names=FALSE, sep="\t")
+
